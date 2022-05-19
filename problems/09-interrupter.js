@@ -10,13 +10,20 @@ console.log(rudePerson("I like pie")); // prints "I what like what pie"
 
 
 Invoking the interrupter function again: 
-let rudePerson2 = interrupter("yo"); // => returns a function
-console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 
 ***********************************************************************/
 
-// your code here!
+const interrupter = interruptingWord => {
+  return string => {
+    let newString = string.split(' ');
+    for (let i = 0; i < newString.length - 1; i++) {
+        newString[i] += ' ' + interruptingWord;
+    }
+    return newString.join(' ');
+  }
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
