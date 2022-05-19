@@ -17,13 +17,20 @@ console.log(smoothie1("kale", "spinach"));
 console.log(smoothie1("honey", "pears", "berries"));
 // prints "I'm having a smoothie with milk and kale and spinach and honey and pears and berries"
 
-let smoothie2 = smoothieMachine("apples", "bananas", "berries");
-console.log(smoothie2("pineapple"));
-// prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
 // your code here
+const smoothieMachine = (...params) => {
+  return  (...fruits) => {
+    params = params.concat(fruits);
 
+
+    return  "I'm having a smoothie with " + params.join(" and ");
+  }
+}
+let smoothie2 = smoothieMachine("apples", "bananas", "berries");
+console.log(smoothie2("pineapple"));
+// prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = smoothieMachine;
