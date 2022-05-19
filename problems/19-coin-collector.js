@@ -26,7 +26,7 @@ Example 3:
 ***********************************************************************/
 
 // your code here
-
+const coinCollector = numCoins => 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
